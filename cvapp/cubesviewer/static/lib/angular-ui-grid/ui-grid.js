@@ -12096,7 +12096,7 @@ module.filter('px', function() {
             pageForward: 'Page forward',
             pageToLast: 'Page to last'
           },
-          sizes: 'items per page',
+          sizes: 'Строк на странице',
           totalItems: 'items',
           through: 'through',
           of: 'of'
@@ -13975,15 +13975,16 @@ module.filter('px', function() {
             var alias = i18nConstants.LOCALE_DIRECTIVE_ALIAS;
             // check for watchable property
             var lang = $scope.$eval($attrs[alias]);
-            if (lang) {
-              $scope.$watch($attrs[alias], function () {
-                i18nService.setCurrentLang(lang);
-              });
-            } else if ($attrs.$$observers) {
-              $attrs.$observe(alias, function () {
-                i18nService.setCurrentLang($attrs[alias] || i18nConstants.DEFAULT_LANG);
-              });
-            }
+            // if (lang) {
+            //   $scope.$watch($attrs[alias], function () {
+            //     i18nService.setCurrentLang(lang);
+            //   });
+            // } else if ($attrs.$$observers) {
+            //   $attrs.$observe(alias, function () {
+            //     i18nService.setCurrentLang($attrs[alias] || i18nConstants.DEFAULT_LANG);
+            //   });
+            // }
+            i18nService.setCurrentLang('ru');
           }
         };
       }

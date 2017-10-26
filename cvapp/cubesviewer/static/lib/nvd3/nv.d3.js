@@ -7998,8 +7998,8 @@ nv.models.multiBar = function() {
             // Controls
             if (showControls) {
                 var controlsData = [
-                    { key: controlLabels.grouped || 'Grouped', disabled: multibar.stacked() },
-                    { key: controlLabels.stacked || 'Stacked', disabled: !multibar.stacked() }
+                    { key: controlLabels.grouped || 'С группировкой', disabled: multibar.stacked() },
+                    { key: controlLabels.stacked || 'С накоплением', disabled: !multibar.stacked() }
                 ];
 
                 controls.width(controlWidth()).color(['#444', '#444', '#444']);
@@ -8132,11 +8132,11 @@ nv.models.multiBar = function() {
                 d.disabled = false;
 
                 switch (d.key) {
-                    case 'Grouped':
+                    case 'С группировкой':
                     case controlLabels.grouped:
                         multibar.stacked(false);
                         break;
-                    case 'Stacked':
+                    case 'С накоплением':
                     case controlLabels.stacked:
                         multibar.stacked(true);
                         break;
@@ -8826,8 +8826,8 @@ nv.models.multiBarHorizontalChart = function() {
             // Controls
             if (showControls) {
                 var controlsData = [
-                    { key: controlLabels.grouped || 'Grouped', disabled: multibar.stacked() },
-                    { key: controlLabels.stacked || 'Stacked', disabled: !multibar.stacked() }
+                    { key: controlLabels.grouped || 'С группировкой', disabled: multibar.stacked() },
+                    { key: controlLabels.stacked || 'С накоплением', disabled: !multibar.stacked() }
                 ];
 
                 controls.width(controlWidth()).color(['#444', '#444', '#444']);
@@ -8907,11 +8907,11 @@ nv.models.multiBarHorizontalChart = function() {
                 d.disabled = false;
 
                 switch (d.key) {
-                    case 'Grouped':
+                    case 'С группировкой':
                     case controlLabels.grouped:
                         multibar.stacked(false);
                         break;
-                    case 'Stacked':
+                    case 'С накоплением':
                     case controlLabels.stacked:
                         multibar.stacked(true);
                         break;

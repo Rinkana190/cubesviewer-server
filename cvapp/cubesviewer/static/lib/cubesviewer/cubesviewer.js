@@ -6876,37 +6876,37 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "        </div>\n" +
     "\n" +
     "\n" +
-    "        <div class=\"dropdown m-b\" style=\"display: inline-block; margin-left: 5px;\">\n" +
-    "          <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" data-submenu>\n" +
-    "            <i class=\"fa fa-fw fa-wrench\"></i> Настройки <span class=\"caret\"></span>\n" +
-    "          </button>\n" +
-    "\n" +
-    "          <ul class=\"dropdown-menu\">\n" +
-    "\n" +
-    "                <li ng-click=\"showSerializeAdd()\"><a tabindex=\"0\"><i class=\"fa fa-fw fa-code\"></i> Добавить представление JSON</a></li>\n" +
-    "\n" +
-    "                <div class=\"divider\"></div>\n" +
-    "\n" +
-    "                <li ng-click=\"toggleTwoColumn()\" ng-class=\"{ 'hidden-xs': ! cvOptions.studioTwoColumn, 'disabled': studioViewsService.views.length == 0 }\"><a tabindex=\"0\"><i class=\"fa fa-fw fa-columns\"></i> 2 колонки\n" +
-    "                    <span class=\"label label-default\" style=\"margin-left: 10px;\" ng-class=\"{ 'label-success': cvOptions.studioTwoColumn }\">{{ cvOptions.studioTwoColumn ? \"ON\" : \"OFF\" }}</span></a>\n" +
-    "                </li>\n" +
-    "                <li ng-click=\"toggleHideControls()\" ng-class=\"{ 'disabled': studioViewsService.views.length == 0 }\"><a tabindex=\"0\"><i class=\"fa fa-fw fa-unlock-alt\"></i> Скрыть элементы управления\n" +
-    "                    <span class=\"label label-default\" style=\"margin-left: 10px;\" ng-class=\"{ 'label-success': cvOptions.hideControls }\">{{ cvOptions.hideControls ? \"ON\" : \"OFF\" }}</span></a>\n" +
-    "                </li>\n" +
-    "\n" +
-    "                <div class=\"divider\"></div>\n" +
-    "\n" +
-    "\n" +
-    "                <!-- <li class=\"\"><a data-toggle=\"modal\" data-target=\"#cvServerInfo\"><i class=\"fa fa-fw fa-server\"></i> Data model</a></li> -->\n" +
-    "                <li class=\"\" ng-class=\"{ 'disabled': cubesService.state != 2 }\"><a data-toggle=\"modal\" data-target=\"#cvServerInfo\" ><i class=\"fa fa-fw fa-database\"></i> Информация о сервере</a></li>\n" +
-    "\n" +
-    "                <div class=\"divider\"></div>\n" +
-    "\n" +
-    "                <li class=\"\"><a href=\"http://github.com/jjmontesl/cubesviewer/blob/master/doc/guide/cubesviewer-user-main.md\" target=\"_blank\"><i class=\"fa fa-fw fa-question\"></i> Руководство пользователя</a></li>\n" +
-    // "                <li class=\"\"><a data-toggle=\"modal\" data-target=\"#cvAboutModal\"><i class=\"fa fa-fw fa-info\"></i> О программе CubesViewer...</a></li>\n" +
-    "\n" +
-    "            </ul>\n" +
-    "        </div>\n" +
+    // "        <div class=\"dropdown m-b\" style=\"display: inline-block; margin-left: 5px;\">\n" +
+    // "          <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" data-submenu>\n" +
+    // "            <i class=\"fa fa-fw fa-wrench\"></i> Настройки <span class=\"caret\"></span>\n" +
+    // "          </button>\n" +
+    // "\n" +
+    // "          <ul class=\"dropdown-menu\">\n" +
+    // "\n" +
+    // "                <li ng-click=\"showSerializeAdd()\"><a tabindex=\"0\"><i class=\"fa fa-fw fa-code\"></i> Добавить представление JSON</a></li>\n" +
+    // "\n" +
+    // "                <div class=\"divider\"></div>\n" +
+    // "\n" +
+    // "                <li ng-click=\"toggleTwoColumn()\" ng-class=\"{ 'hidden-xs': ! cvOptions.studioTwoColumn, 'disabled': studioViewsService.views.length == 0 }\"><a tabindex=\"0\"><i class=\"fa fa-fw fa-columns\"></i> 2 колонки\n" +
+    // "                    <span class=\"label label-default\" style=\"margin-left: 10px;\" ng-class=\"{ 'label-success': cvOptions.studioTwoColumn }\">{{ cvOptions.studioTwoColumn ? \"ON\" : \"OFF\" }}</span></a>\n" +
+    // "                </li>\n" +
+    // "                <li ng-click=\"toggleHideControls()\" ng-class=\"{ 'disabled': studioViewsService.views.length == 0 }\"><a tabindex=\"0\"><i class=\"fa fa-fw fa-unlock-alt\"></i> Скрыть элементы управления\n" +
+    // "                    <span class=\"label label-default\" style=\"margin-left: 10px;\" ng-class=\"{ 'label-success': cvOptions.hideControls }\">{{ cvOptions.hideControls ? \"ON\" : \"OFF\" }}</span></a>\n" +
+    // "                </li>\n" +
+    // "\n" +
+    // "                <div class=\"divider\"></div>\n" +
+    // "\n" +
+    // "\n" +
+    // "                <!-- <li class=\"\"><a data-toggle=\"modal\" data-target=\"#cvServerInfo\"><i class=\"fa fa-fw fa-server\"></i> Data model</a></li> -->\n" +
+    // "                <li class=\"\" ng-class=\"{ 'disabled': cubesService.state != 2 }\"><a data-toggle=\"modal\" data-target=\"#cvServerInfo\" ><i class=\"fa fa-fw fa-database\"></i> Информация о сервере</a></li>\n" +
+    // "\n" +
+    // "                <div class=\"divider\"></div>\n" +
+    // "\n" +
+    // "                <li class=\"\"><a href=\"http://github.com/jjmontesl/cubesviewer/blob/master/doc/guide/cubesviewer-user-main.md\" target=\"_blank\"><i class=\"fa fa-fw fa-question\"></i> Руководство пользователя</a></li>\n" +
+    // // "                <li class=\"\"><a data-toggle=\"modal\" data-target=\"#cvAboutModal\"><i class=\"fa fa-fw fa-info\"></i> О программе CubesViewer...</a></li>\n" +
+    // "\n" +
+    // "            </ul>\n" +
+    // "        </div>\n" +
     "\n" +
     "        <div style=\"display: inline-block; margin-left: 10px; margin-bottom: 0px;\">\n" +
     "\n" +
@@ -7046,7 +7046,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "    </div>\n" +
     "\n" +
     "    <div ng-if=\"view.params.charttype == 'bars-vertical'\">\n" +
-    "        <h3><i class=\"fa fa-fw fa-bar-chart\"></i> Chart\n" +
+    "        <h3><i class=\"fa fa-fw fa-bar-chart\"></i> Диаграмма\n" +
     "            <i ng-show=\"view.pendingRequests > 0\" class=\"fa fa-circle-o-notch fa-spin fa-fw margin-bottom text-info pull-right\"></i>\n" +
     "        </h3>\n" +
     "        <div ng-if=\"view.pendingRequests > 0\" class=\"loadingbar-content\">\n" +
@@ -7058,7 +7058,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "    </div>\n" +
     "\n" +
     "    <div ng-if=\"view.params.charttype == 'bars-horizontal'\">\n" +
-    "        <h3><i class=\"fa fa-fw fa-bar-chart fa-rotate-270\"></i> Chart\n" +
+    "        <h3><i class=\"fa fa-fw fa-bar-chart fa-rotate-270\"></i> Диаграмма\n" +
     "            <i ng-show=\"view.pendingRequests > 0\" class=\"fa fa-circle-o-notch fa-spin fa-fw margin-bottom text-info pull-right\"></i>\n" +
     "        </h3>\n" +
     "        <div ng-if=\"view.pendingRequests > 0\" class=\"loadingbar-content\">\n" +
@@ -7070,7 +7070,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "    </div>\n" +
     "\n" +
     "    <div ng-if=\"view.params.charttype == 'lines'\">\n" +
-    "        <h3><i class=\"fa fa-fw fa-line-chart\"></i> Chart\n" +
+    "        <h3><i class=\"fa fa-fw fa-line-chart\"></i> Диаграмма\n" +
     "            <i ng-show=\"view.pendingRequests > 0\" class=\"fa fa-circle-o-notch fa-spin fa-fw margin-bottom text-info pull-right\"></i>\n" +
     "        </h3>\n" +
     "        <div ng-if=\"view.pendingRequests > 0\" class=\"loadingbar-content\">\n" +
@@ -7082,7 +7082,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "    </div>\n" +
     "\n" +
     "    <div ng-if=\"view.params.charttype == 'lines-stacked'\">\n" +
-    "        <h3><i class=\"fa fa-fw fa-area-chart\"></i> Chart\n" +
+    "        <h3><i class=\"fa fa-fw fa-area-chart\"></i> Диаграмма\n" +
     "            <i ng-show=\"view.pendingRequests > 0\" class=\"fa fa-circle-o-notch fa-spin fa-fw margin-bottom text-info pull-right\"></i>\n" +
     "        </h3>\n" +
     "        <div ng-if=\"view.pendingRequests > 0\" class=\"loadingbar-content\">\n" +
@@ -7094,7 +7094,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "    </div>\n" +
     "\n" +
     "    <div ng-if=\"view.params.charttype == 'radar'\">\n" +
-    "        <h3><i class=\"fa fa-fw fa-bullseye\"></i> Chart\n" +
+    "        <h3><i class=\"fa fa-fw fa-bullseye\"></i> Диаграмма\n" +
     "            <i ng-show=\"view.pendingRequests > 0\" class=\"fa fa-circle-o-notch fa-spin fa-fw margin-bottom text-info pull-right\"></i>\n" +
     "        </h3>\n" +
     "        <div ng-if=\"view.pendingRequests > 0\" class=\"loadingbar-content\">\n" +
@@ -7106,7 +7106,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "    </div>\n" +
     "\n" +
     "    <div ng-if=\"view.params.charttype == 'sunburst'\">\n" +
-    "        <h3><i class=\"fa fa-fw fa-sun-o\"></i> Chart\n" +
+    "        <h3><i class=\"fa fa-fw fa-sun-o\"></i> Диаграмма\n" +
     "            <i ng-show=\"view.pendingRequests > 0\" class=\"fa fa-circle-o-notch fa-spin fa-fw margin-bottom text-info pull-right\"></i>\n" +
     "        </h3>\n" +
     "        <div ng-if=\"view.pendingRequests > 0\" class=\"loadingbar-content\">\n" +
@@ -7166,11 +7166,11 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "\n" +
     "  <ul class=\"dropdown-menu dropdown-menu-right cv-view-menu cv-view-menu-cut\">\n" +
     "\n" +
-    "    <li ng-show=\"view.params.mode == 'explore'\" ng-click=\"filterSelected()\" ng-class=\"{ 'disabled': view.params.drilldown.length != 1 }\"><a href=\"\"><i class=\"fa fa-fw fa-filter\"></i> Filter selected rows</a></li>\n" +
+    "    <li ng-show=\"view.params.mode == 'explore'\" ng-click=\"filterSelected()\" ng-class=\"{ 'disabled': view.params.drilldown.length != 1 }\"><a href=\"\"><i class=\"fa fa-fw fa-filter\"></i> Фильтр по выбранным строкам</a></li>\n" +
     "    <div ng-show=\"view.params.mode == 'explore'\" class=\"divider\"></div>\n" +
     "\n" +
     "    <li class=\"dropdown-submenu\">\n" +
-    "        <a tabindex=\"0\"><i class=\"fa fa-fw fa-bars\"></i> Dimension filter</a>\n" +
+    "        <a tabindex=\"0\"><i class=\"fa fa-fw fa-bars\"></i> Фильтр по измерениям</a>\n" +
     "        <ul class=\"dropdown-menu\">\n" +
     "\n" +
     "          <li on-repeat-done ng-repeat-start=\"dimension in view.cube.dimensions\" ng-if=\"dimension.levels.length == 1\" ng-click=\"showDimensionFilter(dimension.name);\">\n" +
@@ -7200,7 +7200,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "    </li>\n" +
     "\n" +
     "    <li class=\"dropdown-submenu\">\n" +
-    "        <a tabindex=\"0\"><i class=\"fa fa-fw fa-calendar\"></i> Date filter</a>\n" +
+    "        <a tabindex=\"0\"><i class=\"fa fa-fw fa-calendar\"></i> Фильтр по дате</a>\n" +
     "        <ul class=\"dropdown-menu\">\n" +
     "          <li ng-repeat=\"dimension in view.cube.dimensions\" ng-if=\"dimension.isDateDimension()\">\n" +
     "            <a href=\"\" ng-click=\"selectDateFilter(dimension.name + ((dimension.info['cv-datefilter-hierarchy']) ? '@' + dimension.info['cv-datefilter-hierarchy'] : ''), true)\">\n" +
@@ -7246,7 +7246,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "\n" +
     "    <div class=\"divider\"></div>\n" +
     "\n" +
-    "    <li ng-class=\"{ 'disabled': view.params.cuts.length == 0 && view.params.datefilters.length == 0 }\" ng-click=\"clearFilters()\"><a href=\"\"><i class=\"fa fa-fw fa-trash\"></i> Clear filters</a></li>\n" +
+    "    <li ng-class=\"{ 'disabled': view.params.cuts.length == 0 && view.params.datefilters.length == 0 }\" ng-click=\"clearFilters()\"><a href=\"\"><i class=\"fa fa-fw fa-trash\"></i> Снять фильтры</a></li>\n" +
     "\n" +
     "  </ul>\n"
   );
@@ -7343,7 +7343,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "    <div ng-show=\"view.params.mode == 'chart'\" class=\"divider\"></div>\n" +
     "\n" +
     "    <li ng-show=\"view.params.mode == 'series' || view.params.mode == 'chart'\" class=\"dropdown-submenu\">\n" +
-    "        <a tabindex=\"0\"><i class=\"fa fa-fw fa-long-arrow-right\"></i> Horizontal dimension</a>\n" +
+    "        <a tabindex=\"0\"><i class=\"fa fa-fw fa-long-arrow-right\"></i> Измерение по горизонтали</a>\n" +
     "        <ul class=\"dropdown-menu\">\n" +
     "\n" +
     "          <li on-repeat-done ng-repeat-start=\"dimension in view.cube.dimensions\" ng-if=\"dimension.levels.length == 1\" ng-click=\"selectXAxis(dimension.name)\">\n" +
@@ -7529,7 +7529,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "                    </div>\n" +
     "\n" +
     "                    <div ng-if=\"view.params.mode == 'series' || view.params.mode == 'chart'\" class=\"label label-secondary cv-infopiece cv-view-viewinfo-extra\" style=\"color: black; background-color: #ccddff;\">\n" +
-    "                        <span style=\"max-width: 350px;\"><i class=\"fa fa-fw fa-long-arrow-right\" title=\"Horizontal dimension\"></i> <b class=\"hidden-xs hidden-sm\">Horizontal dimension:</b> {{ (view.params.xaxis != null) ? view.cube.dimensionParts(view.params.xaxis).labelShort : \"None\" }}</span>\n" +
+    "                        <span style=\"max-width: 350px;\"><i class=\"fa fa-fw fa-long-arrow-right\" title=\"Horizontal dimension\"></i> <b class=\"hidden-xs hidden-sm\">Измерение по горизонтали:</b> {{ (view.params.xaxis != null) ? view.cube.dimensionParts(view.params.xaxis).labelShort : \"None\" }}</span>\n" +
     "                        <button type=\"button\" class=\"btn btn-info btn-xs\" style=\"visibility: hidden; margin-left: -20px;\"><i class=\"fa fa-fw fa-info\"></i></button>\n" +
     "\n" +
     "                        <button ng-hide=\"view.getControlsHidden() || !view.params.xaxis || view.cube.dimensionParts(view.params.xaxis).hierarchy.levels.length < 2\" ng-disabled=\"! view.cube.dimensionParts(view.params.xaxis).drilldownDimensionMinus\" type=\"button\" ng-click=\"selectXAxis(view.cube.dimensionParts(view.params.xaxis).drilldownDimensionMinus, true)\" class=\"btn btn-secondary btn-xs hidden-print\" style=\"margin-left: 3px;\"><i class=\"fa fa-fw fa-minus\"></i></button>\n" +
