@@ -255,6 +255,8 @@ angular.module('bootstrapSubmenu', []).directive("submenu", ['$timeout', functio
 
         options.success = function(resp, status, xhr) {
             // must parse dimensions first into a "fake" model
+            console.log("RESP")
+            console.log(resp)
             var cube = new cubes.Cube(resp);
 
             self._cubes[name] = cube;
@@ -992,6 +994,10 @@ cubes.Cube.prototype.dimensionParts = function(dimensionString) {
  */
 cubes.Cube.prototype.measureAggregates = function(measureName) {
 	var aggregates = $.grep(this.aggregates, function(ia) { return measureName ? ia.measure == measureName : !ia.measure; } );
+	// GOVNOKOD
+    if (aggregates.length == 1) {
+        aggregates[0].label = "Число";
+    }
 	return aggregates;
 };
 
@@ -3842,7 +3848,7 @@ cubesviewer._seriesAddRows = function($scope, data) {
 		rows[0]["key0"] = view.cube.aggregateFromName(view.params.yaxis).label;
 
 		var col = {
-			name: "Measure",
+			name: "Мера",
 			field: "key0",
 			index : "key0",
 			headerCellClass: "cv-grid-header-measure",
@@ -7204,7 +7210,8 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "        <ul class=\"dropdown-menu\">\n" +
     "          <li ng-repeat=\"dimension in view.cube.dimensions\" ng-if=\"dimension.isDateDimension()\">\n" +
     "            <a href=\"\" ng-click=\"selectDateFilter(dimension.name + ((dimension.info['cv-datefilter-hierarchy']) ? '@' + dimension.info['cv-datefilter-hierarchy'] : ''), true)\">\n" +
-    "                {{ dimension.label + ((dimension.hierarchy(dimension.info[\"cv-datefilter-hierarchy\"])) ? \" / \" + dimension.hierarchy(dimension.info[\"cv-datefilter-hierarchy\"]).label : \"\") }}\n" +
+    "                Год / по умолчанию\n" +
+    // "                {{ dimension.label + ((dimension.hierarchy(dimension.info[\"cv-datefilter-hierarchy\"])) ? \" / \" + dimension.hierarchy(dimension.info[\"cv-datefilter-hierarchy\"]).label : \"\") }}\n" +
     "            </a>\n" +
     "          </li>\n" +
     "          <li ng-if=\"view.cube.dateDimensions().length == 0\" class=\"disabled\">\n" +
@@ -7493,7 +7500,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "\n" +
     "\n" +
     "                    <div ng-repeat=\"drilldown in view.params.drilldown\" ng-init=\"parts = view.cube.dimensionParts(drilldown);\" ng-if=\"view.params.mode != 'facts'\" class=\"label label-secondary cv-infopiece cv-view-viewinfo-drill\" style=\"color: black; background-color: #ccffcc;\">\n" +
-    "                        <span><i class=\"fa fa-fw fa-arrow-down\" title=\"Drilldown\"></i> <b class=\"hidden-xs hidden-sm\">Drilldown:</b> <span title=\"{{ view.cube.dimensionParts(drilldown).label }}\">{{ parts.labelShort }}</span></span>\n" +
+    "                        <span><i class=\"fa fa-fw fa-arrow-down\" title=\"Drilldown\"></i> <b class=\"hidden-xs hidden-sm\">Детализация:</b> <span title=\"{{ view.cube.dimensionParts(drilldown).label }}\">{{ parts.labelShort }}</span></span>\n" +
     "                        <button type=\"button\" class=\"btn btn-info btn-xs\" style=\"visibility: hidden; margin-left: -20px;\"><i class=\"fa fa-fw fa-info\"></i></button>\n" +
     "\n" +
     "                        <button ng-hide=\"view.getControlsHidden() || parts.hierarchy.levels.length < 2\" ng-disabled=\"! parts.drilldownDimensionMinus\" type=\"button\" ng-click=\"selectDrill(parts.drilldownDimensionMinus, true)\" class=\"btn btn-secondary btn-xs hidden-print\" style=\"margin-left: 3px;\"><i class=\"fa fa-fw fa-minus\"></i></button>\n" +
