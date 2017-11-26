@@ -6863,7 +6863,7 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "\n" +
     "        <div ng-if=\"cvOptions.backendUrl\" class=\"dropdown m-b\" style=\"display: inline-block; \">\n" +
     "          <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" data-submenu>\n" +
-    "            <i class=\"fa fa-fw fa-file\"></i> Сохраненные выборки <span class=\"caret\"></span>\n" +
+    // "            <i class=\"fa fa-fw fa-file\"></i> Сохраненные выборки <span class=\"caret\"></span>\n" +
     "          </button>\n" +
     "\n" +
     "          <ul class=\"dropdown-menu cv-gui-catalog-menu\">\n" +
