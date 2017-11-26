@@ -6861,25 +6861,25 @@ angular.module('cv.cubes').service("gaService", ['$rootScope', '$http', '$cookie
     "        </div>\n" +
     "\n" +
     "\n" +
-    "        <div ng-if=\"cvOptions.backendUrl\" class=\"dropdown m-b\" style=\"display: inline-block; \">\n" +
-    "          <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" data-submenu>\n" +
+    // "        <div ng-if=\"cvOptions.backendUrl\" class=\"dropdown m-b\" style=\"display: inline-block; \">\n" +
+    // "          <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" data-submenu>\n" +
     // "            <i class=\"fa fa-fw fa-file\"></i> Сохраненные выборки <span class=\"caret\"></span>\n" +
-    "          </button>\n" +
-    "\n" +
-    "          <ul class=\"dropdown-menu cv-gui-catalog-menu\">\n" +
-    "\n" +
-    "            <li class=\"dropdown-header\">Мои</li>\n" +
-    "\n" +
-    "            <!-- <li ng-show=\"true\" class=\"disabled\"><a>Loading...</a></li>  -->\n" +
-    "            <li ng-repeat=\"sv in reststoreService.savedViews | orderBy:'sv.name'\" ng-if=\"sv.owner == cvOptions.user\" ng-click=\"reststoreService.addSavedView(sv.id)\"><a style=\"max-width: 360px; overflow-x: hidden; text-overflow: ellipsis; white-space: nowrap;\"><i class=\"fa fa-fw\"></i> {{ sv.name }}</a></li>\n" +
-    "\n" +
-    "            <li class=\"dropdown-header\">Общие</li>\n" +
-    "\n" +
-    "            <!-- <li ng-show=\"true\" class=\"disabled\"><a>Loading...</a></li>  -->\n" +
-    "            <li ng-repeat=\"sv in reststoreService.savedViews | orderBy:'sv.name'\" ng-if=\"sv.shared && sv.owner != cvOptions.user\" ng-click=\"reststoreService.addSavedView(sv.id)\"><a style=\"max-width: 360px; overflow-x: hidden; text-overflow: ellipsis; white-space: nowrap;\"><i class=\"fa fa-fw\"></i> {{ sv.name }}</a></li>\n" +
-    "\n" +
-    "          </ul>\n" +
-    "        </div>\n" +
+    // "          </button>\n" +
+    // "\n" +
+    // "          <ul class=\"dropdown-menu cv-gui-catalog-menu\">\n" +
+    // "\n" +
+    // "            <li class=\"dropdown-header\">Мои</li>\n" +
+    // "\n" +
+    // "            <!-- <li ng-show=\"true\" class=\"disabled\"><a>Loading...</a></li>  -->\n" +
+    // "            <li ng-repeat=\"sv in reststoreService.savedViews | orderBy:'sv.name'\" ng-if=\"sv.owner == cvOptions.user\" ng-click=\"reststoreService.addSavedView(sv.id)\"><a style=\"max-width: 360px; overflow-x: hidden; text-overflow: ellipsis; white-space: nowrap;\"><i class=\"fa fa-fw\"></i> {{ sv.name }}</a></li>\n" +
+    // "\n" +
+    // "            <li class=\"dropdown-header\">Общие</li>\n" +
+    // "\n" +
+    // "            <!-- <li ng-show=\"true\" class=\"disabled\"><a>Loading...</a></li>  -->\n" +
+    // "            <li ng-repeat=\"sv in reststoreService.savedViews | orderBy:'sv.name'\" ng-if=\"sv.shared && sv.owner != cvOptions.user\" ng-click=\"reststoreService.addSavedView(sv.id)\"><a style=\"max-width: 360px; overflow-x: hidden; text-overflow: ellipsis; white-space: nowrap;\"><i class=\"fa fa-fw\"></i> {{ sv.name }}</a></li>\n" +
+    // "\n" +
+    // "          </ul>\n" +
+    // "        </div>\n" +
     "\n" +
     "\n" +
     // "        <div class=\"dropdown m-b\" style=\"display: inline-block; margin-left: 5px;\">\n" +
